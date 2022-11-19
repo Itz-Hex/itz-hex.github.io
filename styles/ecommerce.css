@@ -1,0 +1,266 @@
+/* HOME SECTION */
+
+section .box {
+    border-radius: 32px;
+}
+
+section#home {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 500px;
+    gap: 32px;
+}
+
+section#home #img-box {
+    background-image: url("../images/ecommerce/ecommerce-mobile.png");
+    background-size: cover;
+}
+
+section#home #text-box {
+    background-image: url('../images/gradient.png');
+    background-color: #fff;
+    background-size: cover;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-position-x: 128px;
+    background-repeat: no-repeat;
+}
+
+section#home #text-box .text h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+    width: 80%;
+}
+
+section#home #text-box .text p {
+    margin-top: 36px;
+    font-size: 16px;
+    width: 70%;
+}
+
+section#home #text-box .buttons .contact-btn {
+    background-color: var(--color-black);
+    height: 45px;
+    width: 180px;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+section#home #text-box .buttons .contact-btn:hover {
+    background-color: var(--color-accent-2);
+    transform: scale(1.05);
+}
+
+section#home #text-box .buttons .social-btn {
+    background-color: var(--color-white);
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    margin-left: 24px;
+    text-decoration: none;
+    color: var(--color-black);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+section#home #text-box .buttons .social-btn:hover {
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+section#home #text-box .buttons .social-btn.instagram:hover {
+    background-color: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+section#home #text-box .buttons .social-btn.discord:hover {
+    background-color: #4e5d94;
+}
+
+section#home #text-box .buttons .social-btn.github:hover {
+    background-color: #333333;
+}
+
+section#home #text-box .buttons .social-btn.dribbble:hover {
+    background-color: #ea4c89;
+}
+
+/* PROJECTS SECTION */
+
+section#projects {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 32px;
+}
+
+section#projects .box {
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+section#projects .box img {
+    border-radius: inherit;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(0.975);
+    transition: all 0.2s ease-in-out;
+}
+
+section#projects .box:hover img {
+    transform: scale(1);
+}
+
+/* CONTACT SECTION */
+
+section#contact {
+    margin-top: 32px;
+    border-radius: 32px;
+    background-color: #fff;
+    background-image: url('../images/gradient.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px;
+}
+
+section#contact .header h1 {
+    font-weight: 500;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+section#contact .header p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+section#contact .cta {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 64px;
+}
+
+section#contact .cta span {
+    background-color: var(--color-accent-2);
+    padding: 12px 48px;
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+section#contact .cta span a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+section#contact .cta span:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 950px) {
+    section#home {
+        grid-template-columns: 1fr;
+    }
+
+    section#home #text-box {
+        background-position-x: 0px;
+    }
+
+    section#home #img-box {
+        display: none;
+    }
+
+    section#projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    section#contact .header p {
+        margin-bottom: 64px;
+    }
+
+    section#contact .cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    section#contact .cta span {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    section#home #text-box .text h1 {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    section#home #text-box .text p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    section#home #text-box .buttons {
+        width: 100%;
+        text-align: center;
+    }
+
+    section#home #text-box .buttons .contact-btn {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 12px;
+    }
+
+    section#home #text-box .buttons .social-btn {
+        margin-bottom: 12px;
+    }
+
+    section#projects .box img {
+        transform: scale(1);
+    }
+
+    section#contact .header h1 {
+        font-size: 20px;
+    }
+
+    section#contact .header p {
+        font-size: 14px;
+    }
+
+    section#contact .cta span {
+        width: 80%;
+        padding: 12px;
+    }
+
+    section#contact .cta span a {
+        font-size: 14px;
+    }
+}
