@@ -12,7 +12,8 @@ section#home {
 }
 
 section#home #img-box {
-    background: linear-gradient(-210deg, var(--color-accent-1) 30%, var(--color-accent-2))
+    background-image: url("../images/flourus/flourus-mobile.png");
+    background-size: cover;
 }
 
 section#home #text-box {
@@ -111,18 +112,6 @@ section#projects {
 
 section#projects .box {
     overflow: hidden;
-    background-color: #7B5BD7;
-}
-
-section#projects .box.box-1 {
-    background-color: #226CE0;
-}
-
-section#projects .box.box-2 {
-    background-color: #FFFFFF;
-}
-
-section#projects .box.box-3 {
     background-color: #393968;
 }
 
